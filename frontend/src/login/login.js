@@ -4,9 +4,11 @@ import { store } from "../App";
 import { Navigate } from "react-router-dom";
 import './login.css';
 import { Link } from "react-router-dom";
-import facebook from "../images/facebook.svg"
-import instagram from "../images/instagram.svg"
-import linkedin from "../images/linkedin.svg"
+
+import Header1 from "../components/headers/header1";
+import Referal from "../components/referal/referal";
+import Topfooter from "../components/footer/topfooter";
+import Footer from "../components/footer/footer";
 
 
 const Login = () =>{
@@ -31,17 +33,7 @@ const Login = () =>{
     }
   return (
         <div className='homepage'>
-            <div className='lnavbar'>
-                <div className='lnavleft'>
-                    <h2 className='lheading1'>LAUNDRY</h2>
-                </div>
-                <div className='lnavright'>
-                    <h4>Home</h4>
-                    <h4>Pricing</h4>
-                    <h4>Career</h4>
-                </div>
-                <h4 className='lnavbtn1'>Sign In</h4>
-            </div>
+            < Header1 />
             <div className='lmaincontent'>
                 <div className='lleftmain'>
                     <div className='lleftcontent'>
@@ -66,43 +58,9 @@ const Login = () =>{
                     </div>
                 </div>
             </div>
-            <div className='lreferalfooter'>
-                <span className="lreferal">Now Refer & Earn ₹500 for every referral*</span>
-                <span className="lterms">*Terms and conditions will be applied</span>
-            </div>
-            <div className='lfootercontainer'>
-                <div className='ltask1'>
-                    <p className='laboutus'>ABOUT US</p>
-                    <p className='laboutdesc'>Doorstep Wash & Dryclean Service</p>
-                </div>
-                <div className='ltask2'>
-                    <p className='lt-one'>Home</p>
-                    <p className='lt-two'>Sign In</p>
-                    <p className='lt-three'>Register</p>
-                </div>
-                <div className='ltask3'>
-                    <p className='lt-one'>Pricing</p>
-                </div>
-                <div className='ltask4'>
-                    <p className='lt-one'>Career</p>
-                    <p className='lt-two'>Blogs</p>
-                    <p className='lt-three'>Create</p>   
-                </div>
-                <div className='ltask5'>
-                    <p className='lt-one'>Content</p>
-                </div>
-                <div className='ltask6'>
-                    <p className='ls-media'>SOCIAL MEDIA</p>
-                    <div className='licons'>
-                        <img src={facebook} alt="Facebook" />
-                        <img src={instagram} alt="Instagram" />
-                        <img src={linkedin} alt="LinkedIn" />
-                    </div>
-                </div>
-            </div>
-            <div className='lcopyright'>
-                <p className='lcopyright1'>2022 © Laundry</p>
-            </div>
+            <Referal />
+            <Topfooter />
+            <Footer />
 
         </div>
   )

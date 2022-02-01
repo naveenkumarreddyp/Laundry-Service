@@ -2,11 +2,13 @@ import React,{useState} from "react";
 import axios from "axios";
 import './register.css';
 import { Link } from "react-router-dom";
-import facebook from "../images/facebook.svg"
-import instagram from "../images/instagram.svg"
-import linkedin from "../images/linkedin.svg"
+
 import CD from "../images/CD.svg"
 
+import Header2 from "../components/headers/header2";
+import Referal from "../components/referal/referal";
+import Topfooter from "../components/footer/topfooter";
+import Footer from "../components/footer/footer";
 
 
 const Register = () =>{
@@ -44,17 +46,7 @@ const Register = () =>{
     }
   return (
         <div className='registerpage'>
-            <div className='rnavbar'>
-                <div className='rnavleft'>
-                    <h2 className='rheading1'>LAUNDRY</h2>
-                </div>
-                <div className='rnavright'>
-                    <h4>Home</h4>
-                    <h4>Pricing</h4>
-                    <h4>Career</h4>
-                </div>
-                <h4 className='rbtn1'>Sign Up</h4>
-            </div>
+            < Header2 />
             <div className='rmaincontent1'>
                 <div className='rleftmain1'>
                     <div className='rleftcontent1'>
@@ -103,43 +95,9 @@ const Register = () =>{
                     </div>
                 </div>
             </div>
-            <div className='rreferalfooter'>
-                <span className="rreferal">Now Refer & Earn ₹500 for every referral*</span>
-                <span className="rterms">*Terms and conditions will be applied</span>
-            </div>
-            <div className='rfootercontainer'>
-                <div className='rtask1'>
-                    <p className='raboutus'>ABOUT US</p>
-                    <p className='raboutdesc'>Doorstep Wash & Dryclean Service</p>
-                </div>
-                <div className='rtask2'>
-                    <p className='rt-one'>Home</p>
-                    <p className='rt-two'>Sign In</p>
-                    <p className='rt-three'>Register</p>
-                </div>
-                <div className='rtask3'>
-                    <p className='rt-one'>Pricing</p>
-                </div>
-                <div className='rtask4'>
-                    <p className='rt-one'>Career</p>
-                    <p className='rt-two'>Blogs</p>
-                    <p className='rt-three'>Create</p>   
-                </div>
-                <div className='rtask5'>
-                    <p className='rt-one'>Content</p>
-                </div>
-                <div className='rtask6'>
-                    <p className='rs-media'>SOCIAL MEDIA</p>
-                    <div className='ricons'>
-                        <img src={facebook} alt="Facebook" />
-                        <img src={instagram} alt="Instagram" />
-                        <img src={linkedin} alt="LinkedIn" />
-                    </div>
-                </div>
-            </div>
-            <div className='rcopyright'>
-                <p className='rcopyright1'>2022 © Laundry</p>
-            </div>
+            <Referal />
+            <Topfooter />
+            <Footer />
         </div>
   )
 }
